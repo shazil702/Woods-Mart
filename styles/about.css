@@ -1,0 +1,32 @@
+/* About Page Specific Styles */
+.about-container {
+    display: flex;
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    gap: 20px;
+  }
+  
+  .about-image img {
+    width: 100%;
+    max-width: 550px;
+    border-radius: 8px;
+  }
+  
+  .about-content {
+    flex: 1;
+  }
+  
+  .about-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .about-subtitle {
+    color: #8bc34a;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+ 
