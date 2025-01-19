@@ -2,11 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
 import {getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
-// // TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCbnmuKt97lRQXbusaezLBPZyXyf1-IzHc",
   authDomain: "custom-ecommerce-bfc09.firebaseapp.com",
@@ -37,6 +33,7 @@ function submit(e) {
      .then((userCredential) => {
         const user = userCredential.user;
         alert('user created successfully')
+        window.location.href = '/pages/login.html'
      })
      .catch((error) => {
         const errorCode = error.code;
@@ -47,5 +44,5 @@ function submit(e) {
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById('signup-form');
-    form.addEventListener('submit', submit);  // Add event listener to the form
+    form.addEventListener('submit', submit); 
 })

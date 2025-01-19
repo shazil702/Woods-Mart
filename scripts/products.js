@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const productId = e.target.getAttribute("data-id");
             const product = products.find((p) => p.id == productId);
     
-            // Retrieve cart from localStorage or initialize
+            // Getting products
             const cart = JSON.parse(localStorage.getItem("cart")) || [];
     
             // Add product to cart

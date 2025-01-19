@@ -4,13 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Retrieve cart data from localStorage
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // Function to render cart items
+    // Function to render items
     function renderCartItems() {
         if (cart.length === 0) {
             cartContainer.innerHTML = "<p>Your cart is empty.</p>";
             return;
         }
-
         cartContainer.innerHTML = cart
             .map(
                 (item) => `
@@ -26,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
             )
             .join("");
     }
-
     // Remove item from cart
     cartContainer.addEventListener("click", function (e) {
         if (e.target.classList.contains("remove-btn")) {
@@ -41,6 +39,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Initial render
     renderCartItems();
 });
